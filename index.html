@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Nexus Life Command Center</title>
+    
+    <!-- PWA & Mobile Overlays -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0b0c10" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Nexus Command" />
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2099/2099058.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Register Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker active:', reg.scope))
+            .catch(err => console.error('Service Worker failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
+

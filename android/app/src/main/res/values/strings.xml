@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Nexus Command</string>
+    <string name="title_activity_main">Nexus Command</string>
+    <string name="package_name">io.nexus.commandcenter</string>
+    <string name="custom_url_scheme">io.nexus.commandcenter</string>
+</resources>
